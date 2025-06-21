@@ -22,8 +22,10 @@ body {
 
 /* #region Header */
 #container_cabeçalho {
-    position: relative;
-    background-color: #000;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: #00000071;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -50,7 +52,10 @@ body {
     text-fill-color: transparent;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
+
+
 
 #container_cabeçalho .menu_principal ul {
     display: flex;
@@ -97,14 +102,18 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
     width: 100%;
+    margin: 0;
 }
 
 #container_principal .banner .conteudo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     color: white;
     text-align: center;
@@ -150,7 +159,7 @@ body {
 }
 
 #container_principal .cards .card h1 {
-    background-color: yellow;
+    background-color: aqua;
     width: 100%;
     margin: 0;
     padding: 2em 0;
@@ -259,6 +268,21 @@ body {
     gap: 1em;
 }
 
+#container_principal .contatos_nav .fa-location-arrow,
+#container_principal .contatos_nav .fa-envelope,
+#container_principal .contatos_nav .fa-phone{
+    background-color: #00c3ff;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+#container_principal .contatos_nav .fa-location-arrow:hover,
+#container_principal .contatos_nav .fa-envelope:hover,
+#container_principal .contatos_nav .fa-phone:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+
+}
 /* #endregion Main */
 
 /* #region Footer */
