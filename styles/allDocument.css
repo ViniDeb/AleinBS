@@ -10,6 +10,7 @@
     text-decoration: none;
     list-style: none;
     color: white;
+    box-sizing: border-box; /* Adicionado para melhor controle de layout */
 }
 
 body {
@@ -39,7 +40,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent; /* Corrigido para browsers que não suportam text-fill-color */
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -49,75 +50,113 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent; /* Corrigido para browsers que não suportam text-fill-color */
     font-weight: bold;
     letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
-
-
 #container_cabeçalho .menu_principal ul {
     display: flex;
     justify-content: space-between;
+    padding: 0; /* Adicionado para remover espaçamento padrão */
+    margin: 0;  /* Adicionado para remover espaçamento padrão */
 }
 
 #container_cabeçalho .menu_principal a {
+    font-weight: bold;
+    font-size: 1.1em;
     color: white;
     padding: 0 10px;
     transition: all 0.3s ease;
-
+    text-decoration: none; /* Garante que links não tenham sublinhado */
 }
 
+#container_cabeçalho .menu_principal li {
+    list-style: none; /* Garante que não apareça marcador */
+}
 
 #container_cabeçalho .menu_principal li:last-child a {
-    border: 2px solid rgb(0, 248, 21);
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 20px;
+    padding: 5px 18px;
     margin-left: 2em;
     margin-right: 2em;
-    background: linear-gradient(90deg, #00f815 0%, #00c3ff 100%);
-    color: #111;
-    transition: all 0.2s ease;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.2s, color 0.2s, background 0.2s;
 }
 
 #container_cabeçalho .menu_principal li:last-child a:hover {
-    background: linear-gradient(90deg, #00c3ff 0%, #00f815 100%);
-    color: #fff;
-    text-shadow: 6px 0px 50px rgb(255, 255, 255);
-    border-color: #00c3ff;
+    text-decoration: none;
+    transform: scale(1.07);
 }
-
-#container_cabeçalho .menu_principal a:hover {
-    color: rgb(0, 248, 21);
-    text-shadow: 6px 0px 50px rgb(255, 255, 255);
-}
-
 
 /* #endregion Header */
 
 /* #region Main */
 #container_principal .banner {
-    background-image: url(../figures/video_banner/earth_banner.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     margin: 0;
+    overflow: hidden;
+}
+
+#container_principal .banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url(../figures/video_banner/earth_banner.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    filter: blur(7px);
 }
 
 #container_principal .banner .conteudo {
+    color: black;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end; /* Corrigido: era 'end', o correto é 'flex-end' */
     align-items: center;
-    color: white;
     text-align: center;
     padding: 0 10%;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+}
+
+#container_principal .banner .conteudo .banner_links  {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 0; /* Adicionado para remover espaçamento padrão */
+}
+
+#container_principal .banner .conteudo .banner_links li {
+    list-style: none; /* Garante que não apareça marcador */
+}
+
+#container_principal .banner .conteudo .banner_links a {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    margin: 5px;
+    color: white; /* Garante cor do link */
+    text-decoration: none; /* Remove sublinhado */
+    display: inline-block; /* Garante que padding funcione corretamente */
+}
+#container_principal .banner .conteudo .banner_links li:last-child a {
+    background-color: #00c3ff9d;
 }
 
 #container_principal .sobre {
@@ -125,51 +164,47 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    padding: 2em 10%
+    padding: 2em 10%;
+}
+
+#container_principal .galeria {
+    text-align: center;
 }
 
 #container_principal .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 2em;
     padding: 2em 10%;
     border-radius: 20px;
-
 }
 
 #container_principal .cards .card {
+    flex: 1 1 250px; /* Corrigido: era 350px, mas comentário diz mínimo 250px */
+    max-width: 300px;
+    min-width: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: green;
-    margin: 2%;
+    border: 2px solid white;
+    margin: 0;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    /* Adiciona bordas arredondadas e sombra */
+    background: #181818;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #container_principal .cards .card:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-#container_principal .cards .card h1 {
-    background-color: aqua;
-    width: 100%;
-    margin: 0;
-    padding: 2em 0;
-    text-align: center;
-    border-bottom-left-radius: 80%;
-
-}
 
 #container_principal .contato {
-    background-image: url(../figures/video_banner/earth_banner.jpg);
+    background-image: url(../figures/images/Planeta-terra.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -183,7 +218,6 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
-    /* Escurece o fundo para melhor contraste */
     z-index: 0;
 }
 
@@ -198,6 +232,7 @@ body {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
+
 
 #container_principal .contato .conteudo h2,
 #container_principal .contato .conteudo h3 {
@@ -220,7 +255,7 @@ body {
 }
 
 #container_principal .contato .formulario input,
-#container_principal .contato .formulario textarea {
+#container_principal .contato .formulario textarea { /* Adicionado textarea para formulário */
     padding: 0.8em 1em;
     border: none;
     border-radius: 8px;
@@ -233,26 +268,25 @@ body {
 }
 
 #container_principal .contato .formulario input:focus,
-#container_principal .contato .formulario textarea:focus {
+#container_principal .contato .formulario textarea:focus { /* Adicionado textarea */
     box-shadow: 0 0 0 2px #00f815;
 }
 
 #container_principal .contato .formulario button {
-    background: linear-gradient(90deg, #00f815 0%, #00c3ff 100%);
-    color: #111;
-    border: none;
-    border-radius: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px; /* Corrigido: estava duplicado e diferente */
+    color: #ffffff;
     padding: 0.9em 1.5em;
     font-weight: bold;
     font-size: 1.1em;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin-top: 0.5em;
+    transition: transform 0.2s, color 0.2s;
+    margin: 0.5em;
 }
 
 #container_principal .contato .formulario button:hover {
-    background: linear-gradient(90deg, #00c3ff 0%, #00f815 100%);
-    color: #fff;
+    transform: scale(1.01);
 }
 
 #container_principal .contato .formulario label {
@@ -266,23 +300,28 @@ body {
     display: flex;
     justify-content: center;
     gap: 1em;
+    padding: 0; /* Adicionado para remover espaçamento padrão */
+    margin: 0;  /* Adicionado para remover espaçamento padrão */
 }
 
 #container_principal .contatos_nav .fa-location-arrow,
 #container_principal .contatos_nav .fa-envelope,
-#container_principal .contatos_nav .fa-phone{
+#container_principal .contatos_nav .fa-phone {
     background-color: #00c3ff;
     border-radius: 100%;
     padding: 10px;
+    color: white; /* Garante cor do ícone */
+    transition: transform 0.3s; /* Adicionado para suavizar hover */
 }
 
 #container_principal .contatos_nav .fa-location-arrow:hover,
 #container_principal .contatos_nav .fa-envelope:hover,
-#container_principal .contatos_nav .fa-phone:hover{
+#container_principal .contatos_nav .fa-phone:hover {
     transform: scale(1.05);
     transition: all 0.3s ease;
-
+    /* align-items: center; Removido pois não faz efeito em elementos inline */
 }
+
 /* #endregion Main */
 
 /* #region Footer */
