@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+/* #region Import */
+@import url("awesome/css/font-awesome.min.css");
+@import url("mobileResponsive.css");
+/* #endregion Import */
+
+/* #region Global */
+* {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 15, 15);
+}
+
+/* #endregion Global */
+
+/* #region Header */
+#container_cabeçalho {
+    position: relative;
+    background-color: #000;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 1%;
+}
+
+#container_cabeçalho .element1 {
+    background: linear-gradient(90deg, #48ff00 0%, #f4f800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#container_cabeçalho .element2 {
+    background: linear-gradient(90deg, #48ff00 0%, #f4f800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#container_cabeçalho .menu_principal ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container_cabeçalho .menu_principal a {
+    color: white;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+
+}
+
+
+#container_cabeçalho .menu_principal li:last-child a {
+    border: 2px solid rgb(0, 248, 21);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 2em;
+    margin-right: 2em;
+    background: linear-gradient(90deg, #00f815 0%, #00c3ff 100%);
+    color: #111;
+    transition: all 0.2s ease;
+}
+
+#container_cabeçalho .menu_principal li:last-child a:hover {
+    background: linear-gradient(90deg, #00c3ff 0%, #00f815 100%);
+    color: #fff;
+    text-shadow: 6px 0px 50px rgb(255, 255, 255);
+    border-color: #00c3ff;
+}
+
+#container_cabeçalho .menu_principal a:hover {
+    color: rgb(0, 248, 21);
+    text-shadow: 6px 0px 50px rgb(255, 255, 255);
+}
+
+
+/* #endregion Header */
+
+/* #region Main */
+#container_principal .banner {
+    background-image: url(../figures/video_banner/earth_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
+}
+
+#container_principal .banner .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 10%;
+}
+
+#container_principal .sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2em 10%
+}
+
+#container_principal .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 10%;
+    border-radius: 20px;
+
+}
+
+#container_principal .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: green;
+    margin: 2%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Adiciona bordas arredondadas e sombra */
+}
+
+#container_principal .cards .card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+#container_principal .cards .card h1 {
+    background-color: yellow;
+    width: 100%;
+    margin: 0;
+    padding: 2em 0;
+    text-align: center;
+    border-bottom-left-radius: 80%;
+
+}
+
+#container_principal .contato {
+    background-image: url(../figures/video_banner/earth_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    padding: 3em 0;
+}
+
+#container_principal .contato::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* Escurece o fundo para melhor contraste */
+    z-index: 0;
+}
+
+#container_principal .contato .conteudo {
+    position: relative;
+    z-index: 1;
+    background: rgba(20, 20, 20, 0.85);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em 2em 2em 2em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#container_principal .contato .conteudo h2,
+#container_principal .contato .conteudo h3 {
+    color: #00f815;
+    margin-bottom: 0.5em;
+}
+
+#container_principal .contato .conteudo p {
+    color: #fff;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+#container_principal .contato .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+    margin-top: 1em;
+}
+
+#container_principal .contato .formulario input,
+#container_principal .contato .formulario textarea {
+    padding: 0.8em 1em;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+    font-size: 1em;
+    resize: vertical;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+#container_principal .contato .formulario input:focus,
+#container_principal .contato .formulario textarea:focus {
+    box-shadow: 0 0 0 2px #00f815;
+}
+
+#container_principal .contato .formulario button {
+    background: linear-gradient(90deg, #00f815 0%, #00c3ff 100%);
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9em 1.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 0.5em;
+}
+
+#container_principal .contato .formulario button:hover {
+    background: linear-gradient(90deg, #00c3ff 0%, #00f815 100%);
+    color: #fff;
+}
+
+#container_principal .contato .formulario label {
+    color: #00f815;
+    font-weight: 500;
+    margin-bottom: 0.3em;
+    text-align: left;
+}
+
+#container_principal .conteudo .contatos_nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+/* #endregion Main */
+
+/* #region Footer */
+/* #endregion Footer */

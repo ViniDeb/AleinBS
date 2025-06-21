@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+    #container_principal .contato .formulario {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    #container_principal .contato .formulario input {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    #container_principal .contato .formulario button {
+        margin-top: 0;
+    }
+
+    #container_principal .conteudo .contatos_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    #container_cabeçalho .menu_principal ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container_cabeçalho .menu_principal li:last-child a {
+        margin: 1em 0;
+        border: none;
+    }
+
+    #container_principal .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container_principal .cards .card {
+        width: 90%;
+    }
+
+    #container_principal .contato .formulario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #container_principal .contato .formulario input,
+    #container_principal .contato .formulario button {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+}
