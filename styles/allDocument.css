@@ -19,11 +19,11 @@ body {
     padding: 0;
     background-color: rgb(15, 15, 15);
 }
-
 /* #endregion Global */
 
 /* #region Header */
 #container_cabeçalho {
+    padding: 0 20px;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -33,10 +33,10 @@ body {
     justify-content: space-between;
     align-items: center;
     color: white;
-    
 }
 
-#container_cabeçalho .element1 {
+#container_cabeçalho .element1,
+#container_cabeçalho .element2 {
     background: linear-gradient(90deg, #48ff00 0%, #f4f800 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -47,13 +47,6 @@ body {
 }
 
 #container_cabeçalho .element2 {
-    background: linear-gradient(90deg, #48ff00 0%, #f4f800 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
@@ -101,10 +94,29 @@ body {
     background-color: #00c3ff;
     transform: scale(1.07);
 }
-
 /* #endregion Header */
 
 /* #region Main */
+
+
+#container_principal .sobre{
+    align-items: center;
+    justify-content: center;
+    background-color: #181818;
+    padding: 0;
+    color: white;
+}
+
+
+#container_principal .sobre h2,
+#container_principal .sobre h3{
+    margin: 0;
+}
+
+#container_principal .sobre .conteudo{
+    display: flex;
+}
+
 #container_principal .banner {
     position: relative;
     display: flex;
@@ -141,7 +153,6 @@ body {
     max-width: 1000px;
     max-width: 80%;
 }
-
 
 #container_principal .banner .conteudo .banner_links  {
     font-weight: bold;
@@ -196,7 +207,7 @@ body {
 }
 
 #container_principal .cards .card {
-    flex: 1 1 250px; /* Corrigido: era 350px, mas comentário diz mínimo 250px */
+    flex: 1 1 250px;
     max-width: 300px;
     min-width: 220px;
     display: flex;
@@ -215,7 +226,6 @@ body {
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
-
 
 #container_principal .contato {
     background-image: url(../figures/images/Planeta-terra.jpg);
@@ -247,7 +257,6 @@ body {
     text-align: center;
 }
 
-
 #container_principal .contato .conteudo h2,
 #container_principal .contato .conteudo h3 {
     color: #00f815;
@@ -269,7 +278,7 @@ body {
 }
 
 #container_principal .contato .formulario input,
-#container_principal .contato .formulario textarea { /* Adicionado textarea para formulário */
+#container_principal .contato .formulario textarea {
     padding: 0.8em 1em;
     border: none;
     border-radius: 8px;
@@ -282,14 +291,14 @@ body {
 }
 
 #container_principal .contato .formulario input:focus,
-#container_principal .contato .formulario textarea:focus { /* Adicionado textarea */
+#container_principal .contato .formulario textarea:focus {
     box-shadow: 0 0 0 2px #00f815;
 }
 
 #container_principal .contato .formulario button {
     background-color: transparent;
     border: 2px solid white;
-    border-radius: 8px; /* Corrigido: estava duplicado e diferente */
+    border-radius: 8px;
     color: #ffffff;
     padding: 0.9em 1.5em;
     font-weight: bold;
@@ -311,31 +320,17 @@ body {
 }
 
 #container_principal .conteudo .contatos_nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    padding: 0; /* Adicionado para remover espaçamento padrão */
-    margin: 0;  /* Adicionado para remover espaçamento padrão */
+    padding: 0;
+    display: flex ;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#container_principal .contatos_nav .fa-location-arrow,
-#container_principal .contatos_nav .fa-envelope,
-#container_principal .contatos_nav .fa-phone {
-    background-color: #00c3ff;
-    border-radius: 100%;
-    padding: 10px;
-    color: white; /* Garante cor do ícone */
-    transition: transform 0.3s; /* Adicionado para suavizar hover */
+#container_principal .contatos_nav li {
+    border-radius: 10%;
+    color: white;
+    transition: transform 0.3s;
 }
-
-#container_principal .contatos_nav .fa-location-arrow:hover,
-#container_principal .contatos_nav .fa-envelope:hover,
-#container_principal .contatos_nav .fa-phone:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-    /* align-items: center; Removido pois não faz efeito em elementos inline */
-}
-
 /* #endregion Main */
 
 /* #region Footer */
