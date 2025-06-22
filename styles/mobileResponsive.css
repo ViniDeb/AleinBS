@@ -36,9 +36,18 @@
         z-index: 1000;
         padding: 1em 0;
     }
+
     /* #endregion Header */
 
-    
+    /* #region Main */
+    #container_principal .conteudo .contatos_nav ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    /* #endregion Main */
 }
 
 #toggle_menu_principal {
