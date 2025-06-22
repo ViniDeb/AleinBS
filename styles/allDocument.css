@@ -267,16 +267,16 @@ body {
 
 #container_principal .contato .formulario input,
 #container_principal .contato .formulario textarea {
+    color: var(--textos_primarios);
     padding: 0.8em 1em;
     border: none;
-    border-radius: var(--bordas);
-    background: var(--fundo_primario);
+    border-radius: 10px;
+    background: var(--fundo_terciario);
     color: var(--textos_primarios);
     font-size: 1em;
     resize: vertical;
     outline: none;
     transition: var(--transition);
-    ;
 }
 
 #container_principal .contato .formulario input:focus,
@@ -287,7 +287,7 @@ body {
 #container_principal .contato .formulario button {
     background-color: transparent;
     border: 2px solid var(--bordas_primarias);
-    border-radius: var(--bordas);
+    border-radius: 10px;
     color: var(--textos_primarios);
     padding: 0.9em 1.5em;
     font-weight: bold;
