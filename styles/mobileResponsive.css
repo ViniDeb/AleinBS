@@ -25,8 +25,7 @@
     #container_cabeçalho .menu_principal {
         display: none;
     }
-
-    #container_cabeçalho #toggle_menu_principal:checked~.menu_principal {
+    #container_cabeçalho #toggle_menu_principal:checked ~ .menu_principal {
         display: flex;
         background-color: #00000071;
         position: absolute;
@@ -34,18 +33,17 @@
         right: 0;
         top: 100%;
         z-index: 1000;
-        padding: 1em 0;
+        padding: 1em 0; 
     }
 
     /* #endregion Header */
 
-    #container_principal .banner .conteudo p {
+        #container_principal .banner .conteudo p {
         white-space: normal;
         overflow: visible;
         border-right: none;
         animation: none;
     }
-
 }
 
 #toggle_menu_principal {
