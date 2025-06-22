@@ -138,6 +138,9 @@ body {
     max-width: 80%;
 }
 
+#container_principal .banner .conteudo span {
+
+}
 #container_principal .banner .conteudo .banner_links {
     font-weight: bold;
     display: flex;

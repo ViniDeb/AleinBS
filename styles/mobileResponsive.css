@@ -48,6 +48,10 @@
     }
 
     /* #endregion Main */
+
+    #container_principal .banner .conteudo p {
+        animation: none;
+    }
 }
 
 #toggle_menu_principal {
