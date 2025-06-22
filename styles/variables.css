@@ -1,0 +1,32 @@
+/* #region variaveis */
+:root {
+    /* #region Cores */
+    --textos_primarios: #ffffff; 
+    --textos_secundarios: #0000; 
+
+    --hover: #00c3ff; /* --> Hover geral */
+    --textos_sombras: 2px 2px 4px #08080880; /* --> Sombra geral*/
+
+    --fundo_primario:  #0f0f0f; /* --> BODY */
+    --fundo_secundario: #00000060; /* --> Fundo dos containers */
+    --fundo_terciario: #181818; /* --> Fundo terciário */
+
+    --fundo_primario_bg_gen: #00c3ff;
+
+
+    --gradiente_1: 90deg, #48ff00 0%, #f4f800 100%; /* --> 
+    Gradiente do Header */
+
+    --bordas_primarias: #ffffff; /* --> Bordas primárias */
+    /* #endregion Cores */
+
+    /* #region transitions */
+    --transition: all 0.3s ease; /* --> Transições gerais */
+
+    /* #endregion transitions */
+
+    /* #region bordas */
+    --bordas: 20px;
+    /* #endregion bordas */
+}
+/* #endregion variaveis */

@@ -2,6 +2,7 @@
 
 /* #regi    on Import */
 @import url("awesome/css/font-awesome.min.css");
+@import url("variables.css");
 @import url("mobileResponsive.css");
 @import url("animations.css");
 /* #endregion Import */
@@ -11,14 +12,15 @@
     text-decoration: none;
     list-style: none;
     color: white;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(15, 15, 15);
+    background-color: var(--fundo_primario);
 }
+
 /* #endregion Global */
 
 /* #region Header */
@@ -27,27 +29,23 @@ body {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    background-color: #00000071;
+    background-color: var(--fundo_secundario);
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--textos_primarios);
 }
 
 #container_cabeçalho .element1,
 #container_cabeçalho .element2 {
-    background: linear-gradient(90deg, #48ff00 0%, #f4f800 100%);
+    background: linear-gradient(var(--gradiente_1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent; 
+    color: transparent;
     font-weight: bold;
     letter-spacing: 1px;
-}
-
-#container_cabeçalho .element2 {
-    transition: all 0.3s ease;
 }
 
 #container_cabeçalho .menu_principal ul {
@@ -60,16 +58,15 @@ body {
 #container_cabeçalho .menu_principal a {
     font-weight: bold;
     font-size: 1.1em;
-    color: white;
+    color: var(--textos_primarios);
     padding: 0 10px;
-    transition: all 0.3s ease;
-    text-decoration: none; 
+    transition: var(--transition);
+    text-decoration: none;
 }
 
 #container_cabeçalho .menu_principal a:hover {
-    color: #00c3ff;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(19, 75, 180, 0.5);
+    color: var(--hover);
+    text-shadow: var(--textos_sombras);
 }
 
 #container_cabeçalho .menu_principal li {
@@ -78,43 +75,31 @@ body {
 }
 
 #container_cabeçalho .menu_principal li:last-child a {
-    border-radius: 20px;
+    border-radius: var(--bordas);
     padding: 5px 20px;
     margin-left: 2em;
     margin-right: 2em;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid var(--bordas_primarias);
+    color: var(--textos_primarios);
     font-weight: bold;
-    transition: transform 0.2s, color 0.2s, background 0.2s;
-    background-color: #222222a8;
+    transition: var(--transition);
 }
 
 #container_cabeçalho .menu_principal li:last-child a:hover {
     text-decoration: none;
-    background-color: #00c3ff;
-    transform: scale(1.07);
+    background-color: var(--hover);
 }
+
 /* #endregion Header */
 
 /* #region Main */
 
-
-#container_principal .sobre{
+#container_principal .sobre {
     align-items: center;
     justify-content: center;
-    background-color: #181818;
+    background-color: var(fundo_terciario);
     padding: 0;
-    color: white;
-}
-
-
-#container_principal .sobre h2,
-#container_principal .sobre h3{
-    margin: 0;
-}
-
-#container_principal .sobre .conteudo{
-    display: flex;
+    color: var(--textos_primarios);
 }
 
 #container_principal .banner {
@@ -141,7 +126,6 @@ body {
 }
 
 #container_principal .banner .conteudo {
-    color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -154,7 +138,7 @@ body {
     max-width: 80%;
 }
 
-#container_principal .banner .conteudo .banner_links  {
+#container_principal .banner .conteudo .banner_links {
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -164,24 +148,24 @@ body {
 }
 
 #container_principal .banner .conteudo .banner_links li {
-    list-style: none; 
+    list-style: none;
 }
 
 #container_principal .banner .conteudo .banner_links a {
     font-weight: bold;
     padding: 10px;
-    border-radius: 20px;
-    background-color: #222222a8;
-    border: 2px solid white;
+    border-radius: var(--bordas);
+    background-color: var(--fundo_terciario);
+    border: 2px solid var(--bordas_primarias);
     transition: all 0.3s ease;
     margin: 5px;
-    color: white; 
-    text-decoration: none; 
-    display: inline-block; 
+    color: var(--textos_primarios);
+    text-decoration: none;
+    display: inline-block;
 }
 
 #container_principal .banner .conteudo .banner_links li:last-child a {
-    background-color: #00c3ff9d;
+    background-color: var(--fundo_primario_bg_gen);
 }
 
 #container_principal .sobre {
@@ -203,7 +187,7 @@ body {
     justify-content: center;
     gap: 2em;
     padding: 2em 10%;
-    border-radius: 20px;
+    border-radius: var(--bordas);
 }
 
 #container_principal .cards .card {
@@ -213,18 +197,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid var(--bordas_primarias);
     margin: 0;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    background: #181818;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+    background: var(--fundo_terciario);
+    transition: var(--transition);
+}
+
+#container_principal .cards .card p {
+    padding: 1em;
+    text-align: center;
+    color: var(--textos_primarios);
+    font-size: 1.1em;
+}
+
+#container_principal .cards .card img {
+    border-radius: 20px;
 }
 
 #container_principal .cards .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--textos_sombras);
 }
 
 #container_principal .contato {
@@ -232,7 +225,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
+    color: var(--textos_primarios);
     position: relative;
     padding: 3em 0;
 }
@@ -241,30 +234,25 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--fundo_secundario);
     z-index: 0;
 }
 
 #container_principal .contato .conteudo {
     position: relative;
     z-index: 1;
-    background: rgba(20, 20, 20, 0.85);
+    background: var(--fundo_secundario);
     max-width: 600px;
     margin: 0 auto;
     padding: 2em 2em 2em 2em;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: var(--textos_sombras);
     text-align: center;
 }
 
-#container_principal .contato .conteudo h2,
-#container_principal .contato .conteudo h3 {
-    color: #00f815;
-    margin-bottom: 0.5em;
-}
-
 #container_principal .contato .conteudo p {
-    color: #fff;
+    color: var(--textos_primarios);
+
     margin-bottom: 1.5em;
     font-size: 1.1em;
 }
@@ -281,30 +269,31 @@ body {
 #container_principal .contato .formulario textarea {
     padding: 0.8em 1em;
     border: none;
-    border-radius: 8px;
-    background: #222;
-    color: #fff;
+    border-radius: var(--bordas);
+    background: var(--fundo_primario);
+    color: var(--textos_primarios);
     font-size: 1em;
     resize: vertical;
     outline: none;
-    transition: box-shadow 0.2s;
+    transition: var(--transition);
+    ;
 }
 
 #container_principal .contato .formulario input:focus,
 #container_principal .contato .formulario textarea:focus {
-    box-shadow: 0 0 0 2px #00f815;
+    box-shadow: 0 0 0 2px var(--hover);
 }
 
 #container_principal .contato .formulario button {
     background-color: transparent;
-    border: 2px solid white;
-    border-radius: 8px;
-    color: #ffffff;
+    border: 2px solid var(--bordas_primarias);
+    border-radius: var(--bordas);
+    color: var(--textos_primarios);
     padding: 0.9em 1.5em;
     font-weight: bold;
     font-size: 1.1em;
     cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+    transition: var(--transition);
     margin: 0.5em;
 }
 
@@ -312,24 +301,25 @@ body {
     transform: scale(1.01);
 }
 
-#container_principal .contato .formulario label {
-    color: #00f815;
-    font-weight: 500;
-    margin-bottom: 0.3em;
-    text-align: left;
-}
-
 #container_principal .conteudo .contatos_nav ul {
     padding: 0;
-    display: flex ;
+    display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 #container_principal .contatos_nav li {
-    border-radius: 10%;
-    color: white;
-    transition: transform 0.3s;
+    border-radius: var(--bordas);
+    color: var(--textos_primarios);
+    transition: var(--transition);
+}
+
+#container_principal .contatos_nav i {
+    font-size:40px;
+    transition: var(--transition);
+}
+
+#container_principal .contatos_nav i:hover {
+    transform: scale(1.1);
 }
 /* #endregion Main */
 
