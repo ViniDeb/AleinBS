@@ -142,22 +142,6 @@ body {
     max-width: 80%;
 }
 
-#container_principal .banner .conteudo p{
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid white; /* Opcional: efeito de cursor */
-    animation: typing 3s steps(40, end) forwards;
-}
-
-@media (max-width: 600px) {
-    #container_principal .banner .conteudo p {
-        white-space: wrap;
-        white-space: normal;
-        overflow: visible;
-        border-right: none;
-        animation: none;
-    }
-}
 
 #container_principal .banner .conteudo .banner_links  {
     font-weight: bold;
