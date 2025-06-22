@@ -10,7 +10,7 @@
     text-decoration: none;
     list-style: none;
     color: white;
-    box-sizing: border-box; /* Adicionado para melhor controle de layout */
+    box-sizing: border-box; 
 }
 
 body {
@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 0 1%;
+    
 }
 
 #container_cabeçalho .element1 {
@@ -40,7 +40,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent; /* Corrigido para browsers que não suportam text-fill-color */
+    color: transparent; 
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -50,7 +50,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent; /* Corrigido para browsers que não suportam text-fill-color */
+    color: transparent;
     font-weight: bold;
     letter-spacing: 1px;
     transition: all 0.3s ease;
@@ -59,8 +59,8 @@ body {
 #container_cabeçalho .menu_principal ul {
     display: flex;
     justify-content: space-between;
-    padding: 0; /* Adicionado para remover espaçamento padrão */
-    margin: 0;  /* Adicionado para remover espaçamento padrão */
+    padding: 0;
+    margin: 0;
 }
 
 #container_cabeçalho .menu_principal a {
@@ -69,27 +69,35 @@ body {
     color: white;
     padding: 0 10px;
     transition: all 0.3s ease;
-    text-decoration: none; /* Garante que links não tenham sublinhado */
+    text-decoration: none; 
+}
+
+#container_cabeçalho .menu_principal a:hover {
+    color: #00c3ff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(19, 75, 180, 0.5);
 }
 
 #container_cabeçalho .menu_principal li {
-    list-style: none; /* Garante que não apareça marcador */
+    list-style: none;
+    margin: 10px 2px;
 }
 
 #container_cabeçalho .menu_principal li:last-child a {
     border-radius: 20px;
-    padding: 5px 18px;
+    padding: 5px 20px;
     margin-left: 2em;
     margin-right: 2em;
-    background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
     font-weight: bold;
     transition: transform 0.2s, color 0.2s, background 0.2s;
+    background-color: #222222a8;
 }
 
 #container_cabeçalho .menu_principal li:last-child a:hover {
     text-decoration: none;
+    background-color: #00c3ff;
     transform: scale(1.07);
 }
 
@@ -123,7 +131,7 @@ body {
     color: black;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Corrigido: era 'end', o correto é 'flex-end' */
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
     padding: 0 10%;
@@ -138,23 +146,26 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 2em;
-    padding: 0; /* Adicionado para remover espaçamento padrão */
+    padding: 0;
 }
 
 #container_principal .banner .conteudo .banner_links li {
-    list-style: none; /* Garante que não apareça marcador */
+    list-style: none; 
 }
 
 #container_principal .banner .conteudo .banner_links a {
+    font-weight: bold;
     padding: 10px;
     border-radius: 20px;
+    background-color: #222222a8;
     border: 2px solid white;
     transition: all 0.3s ease;
     margin: 5px;
-    color: white; /* Garante cor do link */
-    text-decoration: none; /* Remove sublinhado */
-    display: inline-block; /* Garante que padding funcione corretamente */
+    color: white; 
+    text-decoration: none; 
+    display: inline-block; 
 }
+
 #container_principal .banner .conteudo .banner_links li:last-child a {
     background-color: #00c3ff9d;
 }
