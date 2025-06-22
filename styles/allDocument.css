@@ -324,4 +324,95 @@ body {
 /* #endregion Main */
 
 /* #region Footer */
+#container_rodapé {
+    background-color: var(--fundo_secundario);
+    color: var(--textos_primarios);
+    padding: 2em 10% 1em 10%;
+    border-top: 2px solid var(--bordas_primarias);
+    font-size: 1em;
+}
+
+#container_rodapé .footer-info,
+#container_rodapé .footer-contacts {
+    flex: 1 1 220px;
+    min-width: 200px;
+    margin-bottom: 1em;
+}
+
+#container_rodapé .footer-info h3,
+#container_rodapé .footer-contacts h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+    color: var(--hover);
+    letter-spacing: 1px;
+}
+
+#container_rodapé .footer-info ul,
+#container_rodapé .footer-contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#container_rodapé .footer-info li,
+#container_rodapé .footer-contacts li {
+    margin-bottom: 0.5em;
+    color: var(--textos_primarios);
+    font-size: 1em;
+}
+
+#container_rodapé .footer-contacts a {
+    color: var(--hover);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#container_rodapé .footer-contacts a:hover {
+    text-decoration: underline;
+    color: var(--textos_primarios);
+}
+
+#container_rodapé .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+#container_rodapé hr {
+    border: none;
+    border-top: 1px solid var(--bordas_primarias);
+    margin: 1.5em 0 1em 0;
+}
+
+#container_rodapé p {
+    margin: 0.3em 0;
+    text-align: center;
+    color: var(--textos_primarios);
+    font-size: 0.95em;
+}
+
+#container_rodapé p a {
+    color: var(--hover);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#container_rodapé p a:hover {
+    text-decoration: underline;
+    color: var(--textos_primarios);
+}
+
+@media (max-width: 700px) {
+    #container_rodapé .footer-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1em;
+    }
+    #container_rodapé {
+        padding: 2em 2em 1em 2em;
+    }
+}
 /* #endregion Footer */
