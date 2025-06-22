@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-/* #region Import */
+/* #regi    on Import */
 @import url("awesome/css/font-awesome.min.css");
 @import url("mobileResponsive.css");
+@import url("animations.css");
 /* #endregion Import */
 
 /* #region Global */
