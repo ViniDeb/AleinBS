@@ -151,6 +151,7 @@ body {
 
 @media (max-width: 600px) {
     #container_principal .banner .conteudo p {
+        white-space: wrap;
         white-space: normal;
         overflow: visible;
         border-right: none;
