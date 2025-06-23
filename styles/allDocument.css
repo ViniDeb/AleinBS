@@ -222,6 +222,7 @@ body {
 
 #container_principal .contato {
     background-image: url(../figures/images/Planeta-terra.jpg);
+    height: 150vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
