@@ -13,6 +13,7 @@
     list-style: none;
     color: white;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -167,17 +168,49 @@ body {
 #container_principal .banner .conteudo .banner_links li:last-child a {
     background-color: var(--fundo_primario_bg_gen);
 }
-
 #container_principal .sobre {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2em 10%;
+    padding: 3em 8%;
+    background: linear-gradient(135deg, var(--fundo_terciario) 70%, var(--fundo_secundario) 100%);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
+}
+
+#container_principal .sobre .serviço {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+#container_principal .sobre .serviço div {
+    flex: 1 1 300px;
+    padding: 0 2em;
+    color: var(--textos_primarios);
+    font-size: 1.15em;
+    line-height: 1.6;
+    background: rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+}
+
+#container_principal .sobre .serviço img {
+    height: 38vh;
+    max-width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+    margin: 1em 0;
+    object-fit: cover;
+    border: 2px solid var(--bordas_primarias);
 }
 
 #container_principal .galeria {
+    background: linear-gradient(135deg, var(--fundo_terciario) 70%, var(--fundo_secundario) 100%);
     text-align: center;
 }
 
@@ -222,7 +255,7 @@ body {
 
 #container_principal .contato {
     background-image: url(../figures/images/Planeta-terra.jpg);
-    height: 150vh;
+    height: 80%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,7 +266,6 @@ body {
 
 #container_principal .contato::before {
     content: "";
-    position: absolute;
     inset: 0;
     background: var(--fundo_secundario);
     z-index: 0;
