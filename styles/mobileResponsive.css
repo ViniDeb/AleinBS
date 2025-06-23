@@ -11,30 +11,56 @@
         border: none;
     }
 
-    #container_cabeçalho .line_top,
-    #container_cabeçalho .line_center,
-    #container_cabeçalho .line_bottom {
-        display: flex;
+    /* Estilo das linhas do hamburger */
+    #container_cabeçalho label span.line_top,
+    #container_cabeçalho label span.line_center,
+    #container_cabeçalho label span.line_bottom {
+        display: block;
         background-color: white;
-        width: 20%;
-        margin: 2px 10px;
-        padding: 3px 15px;
-
+        width: 30px;
+        height: 4px;
+        margin: 6px auto;
+        transition: all 0.3s ease-in-out;
     }
 
+    /* Hamburger vira X */
+    #toggle_menu_principal:checked + label span.line_top {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    #toggle_menu_principal:checked + label span.line_center {
+        opacity: 0;
+    }
+
+    #toggle_menu_principal:checked + label span.line_bottom {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* Menu principal com animação */
     #container_cabeçalho .menu_principal {
-        display: none;
-    }
-
-    #container_cabeçalho #toggle_menu_principal:checked~.menu_principal {
         display: flex;
-        background-color: #00000071;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000a8;
         position: absolute;
         width: 50%;
         right: 0;
         top: 100%;
         z-index: 1000;
         padding: 1em 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.4s ease;
+        border-bottom-left-radius: 20px;
+        
+
+    }
+
+    #toggle_menu_principal:checked ~ .menu_principal {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     /* #endregion Header */

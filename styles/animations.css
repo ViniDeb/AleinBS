@@ -2,7 +2,7 @@
 
 
 /* #region Banner paragrafo */
-@media (min-width: 800px) {
+@media (min-width: 730px) {
     #container_principal .banner .conteudo p {
         overflow: hidden;
         white-space: nowrap;
@@ -40,3 +40,8 @@
 }
 
 /* #endregion Banner paragrafo */
+
+
+@media (max-width: 728px) {
+
+}
